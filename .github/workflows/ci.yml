@@ -21,6 +21,6 @@ jobs:
     - uses: docker/build-push-action@v4
       name: Build image
       with:
-        push: ${{ (github.ref == 'refs/heads/master') && (github.repository == 'ishan09811/build-environments') }}
+        push: true
         context: ${{ matrix.image }}
         tags: ishan09811/build-environments:${{ matrix.image }}
